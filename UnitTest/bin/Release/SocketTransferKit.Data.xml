@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocketTransferKit.Data</name>
+    </assembly>
+    <members>
+        <member name="T:SocketTransferKit.Data.StructCommand">
+            <summary>
+            命令
+            </summary>
+        </member>
+        <member name="T:SocketTransferKit.Data.ICommand">
+            <summary>
+            所有命令必须实现这个接口
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.ICommand.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.ICommand.CommandTime">
+            <summary>
+            命令时间
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.ICommand.Data">
+            <summary>
+            数据字段
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.ICommand.ByteData">
+            <summary>
+            数据字段--另一种数据类型
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Data.StructCommand.#ctor(SocketTransferKit.Data.CommandType)">
+            <summary>
+            ctor
+            </summary>
+            <param name="commandType">命令类型</param>
+        </member>
+        <member name="P:SocketTransferKit.Data.StructCommand.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.StructCommand.CommandTime">
+            <summary>
+            命令创建时间
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.StructCommand.Data">
+            <summary>
+            命令数据
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.StructCommand.ByteData">
+            <summary>
+            数据字段--另一种数据类型
+            </summary>
+        </member>
+        <member name="T:SocketTransferKit.Data.Command">
+            <summary>
+            命令
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Data.Command.#ctor(SocketTransferKit.Data.CommandType)">
+            <summary>
+            ctor
+            </summary>
+            <param name="commandType">命令类型</param>
+        </member>
+        <member name="P:SocketTransferKit.Data.Command.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.Command.CommandTime">
+            <summary>
+            命令创建时间
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.Command.Data">
+            <summary>
+            命令数据
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Data.Command.ByteData">
+            <summary>
+            数据字段--另一种数据类型
+            </summary>
+        </member>
+        <member name="T:SocketTransferKit.Data.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.ServerWelcome">
+            <summary>
+            服务端欢迎信息
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.ClientHello">
+            <summary>
+            客户端握手信息
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.NtpRequestPackage">
+            <summary>
+            NTP协议请求数据报
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.NtpReturnPackage">
+            <summary>
+            NTP协议返回数据报
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateTaskCalcDictionary">
+            <summary>
+            更新计算程序字典
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateAmpDictionary">
+            <summary>
+            更新建模客户端字典
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.TaskCalcExceptionMessage">
+            <summary>
+            计算程序异常信息
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.TaskCalcLogMessage">
+            <summary>
+            计算程序日志信息
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateCalcTime">
+            <summary>
+            更新计算时间（秒）
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateSimTime">
+            <summary>
+            更新仿真时间（秒）
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.ServerShutdown">
+            <summary>
+            服务器关机
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.ClientPing">
+            <summary>
+            客户端连接状态探测
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.ServerPong">
+            <summary>
+            服务端连接状态响应
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateTaskSnapNum">
+            <summary>
+            更新任务启动IC
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.SubscribePageData">
+            <summary>
+            客户端订阅页面数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UnsubscribePageData">
+            <summary>
+            客户端取消订阅页面数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.DBSSubscribePointData">
+            <summary>
+            实时数据库向中间程序订阅点数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.SaveIntCache">
+            <summary>
+            保存缓存Int数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.SaveDoubleCache">
+            <summary>
+            保存缓存Double数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateFreQuency">
+            <summary>
+            更新请求频率
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.GetFreQuency">
+            <summary>
+            获取频率
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.DBSSubscribePointDataFinish">
+            <summary>
+            订阅点数据完成
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.GetFreQuencyFiniSh">
+            <summary>
+            更新频率完成
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.DbDeliverInterVal">
+            <summary>
+            实时数据库派发频率
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.DBServiceDeliverDoubleData">
+            <summary>
+            实时数据库派送Double数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.DBServiceDeliverIntData">
+            <summary>
+            实时数据库派送Int数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.DBDeliverPoint">
+            <summary>
+            实时数据库派发点名
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.UpdateFreQuencyFinish">
+            <summary>
+            更新请求频率完成
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.HDBSSubscribePointData">
+            <summary>
+            HDBS向DBS订阅点数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.HdbsUnsubscribePointData">
+            <summary>
+            HDBS取消向DBS订阅点数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.HDChartRequestData">
+            <summary>
+            历史曲线程序向历史数据库请求数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.HDBServiceDeliverData">
+            <summary>
+            历史数据库派发数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.EqulcDeliverData">
+            <summary>
+            设备计算程序派发数据
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.EqulcChangeCmd">
+            <summary>
+            发送教控台指令
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.EqulcForceCmd">
+            <summary>
+            发送强制指令
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.SCSInterventionCmd">
+            <summary>
+            干涉获取设备
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.CommandType.SCSInterventionCallBackCmd">
+            <summary>
+            干涉获取设备回发
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.ToCommand(System.Byte[],System.Boolean)">
+            <summary>
+            反序列化为命令
+            </summary>
+            <param name="data"></param>
+            <param name="compressedData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.SerializeStruct(System.Object)">
+            <summary>
+            高速序列化（可能不稳定）
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.DeserializeStruct``1(System.Byte[])">
+            <summary>
+            高速反序列化（可能不稳定）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.ToByte(SocketTransferKit.Data.ICommand,System.Boolean)">
+            <summary>
+            序列化为二进制数据
+            </summary>
+            <param name="command"></param>
+            <param name="compress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.SerializeObject(System.Object)">
+            <summary>
+            把对象序列化并返回相应的字节
+            </summary>
+            <param name="pObj">需要序列化的对象</param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.DeserializeObject(System.Byte[])">
+            <summary>
+            把字节反序列化成相应的对象
+            </summary>
+            <param name="pBytes">字节流</param>
+            <returns>object</returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.ConvertIntToByteArray(System.Int32)">
+            <summary>
+            将32位整数转换为字节形式
+            </summary>
+            <param name="int32"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.ConvertByteArrayToInt(System.Byte[])">
+            <summary>
+            将字节形式转换为32位整数
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.ToStructByteArray(SocketTransferKit.Data.ICommand,System.Boolean)">
+            <summary>
+            将命令转换为结构化byte[]（前四字节标志命令类型，后四字节标志消息体长度，最后为命令数据）
+            </summary>
+            <param name="command"></param>
+            <param name="compress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.Object2Json(System.Object)">
+            <summary>
+            将对象序列化为JSON字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.Json2Object``1(System.String)">
+            <summary>
+            JSON转换为指定类型的实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsonStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.Json2Object(System.String)">
+            <summary>
+            JSON转换为弱类型的实体
+            </summary>
+            <param name="jsonStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Data.ExtMethods.CloneObject``1(``0)">
+            <summary>
+            创建对象的深拷贝副本
+            </summary>
+            <param name="obj"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:SocketTransferKit.Data.NtpStruct">
+            <summary>
+            NTP协议数据结构
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.NtpStruct.T1">
+            <summary>
+            客户端NTP请求数据报发出时间
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.NtpStruct.T2">
+            <summary>
+            服务端接收到数据的时间
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.NtpStruct.T3">
+            <summary>
+            服务端处理完成发出NTP返回数据报的时间
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Data.NtpStruct.T4">
+            <summary>
+            客户端接收到数据的时间
+            </summary>
+        </member>
+    </members>
+</doc>

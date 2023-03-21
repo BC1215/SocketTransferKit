@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="兼容模式启动-停止" storage="e:\baichen\公用\socket通信\sockettransferkit\unittest\兼容模式启动-停止.orderedtest" id="8a74b3c3-1f07-490e-8f3e-0ccd40aad62c" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="ada7d9c6-f872-402e-6280-81cd4ba92db3" name="server_start_special_mode" storage="bin\debug\unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d3855363-153f-12f4-7570-53e88eb5bb93" name="server_stop" storage="bin\debug\unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

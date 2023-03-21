@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="标准模式启动-停止 - 复制" storage="e:\baichen\公用\socket通信\sockettransferkit\unittest\标准模式启动-停止 - 复制.orderedtest" id="c7c2286b-2da2-43f2-8d99-18be2109d7e1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="4b97ce9c-174a-2c9d-0d5d-e2f51839ade2" name="server_start_normal_mode" storage="bin\debug\unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d3855363-153f-12f4-7570-53e88eb5bb93" name="server_stop" storage="bin\debug\unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

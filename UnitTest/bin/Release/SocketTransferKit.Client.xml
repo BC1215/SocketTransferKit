@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocketTransferKit.Client</name>
+    </assembly>
+    <members>
+        <member name="M:SocketTransferKit.Client.ClientConfig.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="configString">配置字符串(例：<![CDATA[clientname=client1;remoteip=192.168.5.211;remoteport=2012]]>)</param>
+            
+        </member>
+        <member name="M:SocketTransferKit.Client.ClientConfig.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="remoteIp">服务端IP</param>
+            <param name="remotePort">服务端端口</param>
+            <param name="clientName">客户端名称</param>
+        </member>
+        <member name="T:SocketTransferKit.Client.SocketClient">
+            <summary>
+            Socket客户端
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._escapeReciveLoop">
+            <summary>
+            退出消息接收循环
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._escapeKeepConnected">
+            <summary>
+            退出连接保持循环
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._delayTestEnabled">
+            <summary>
+            是否启用延迟计算
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._isKeepConnection">
+            <summary>
+            是否启用心跳机制保证连接
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._delay">
+            <summary>
+            与服务端的通信延迟（ms）
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._ip">
+            <summary>
+            服务器IP地址
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._clientSocket">
+            <summary>
+            Socket客户端
+            </summary>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._triggerConnectionLostFlag">
+            <summary>
+            允许服务连接丢失事件发生
+            失去连接通知事件标识，防止重复下线
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.#ctor(SocketTransferKit.Client.ClientConfig)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="clientConfig">客户端配置</param>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.GetDelay">
+            <summary>
+            发送NTP协议，请求数据命令
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.SendCommand(SocketTransferKit.Data.ICommand)">
+            <summary>
+            发送命令
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.TestConnection">
+            <summary>
+            测试连接可用性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.InitSocket">
+            <summary>
+            初始化Socket对象
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.ConnectSelf">
+            <summary>
+            重新连接远程计算机,不关心心跳连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.Connect(System.Boolean)">
+            <summary>
+            重新连接远程计算机,关心心跳连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.Disconnect">
+            <summary>
+            断开与远程的连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.DisconnectSelf">
+            <summary>
+            退出消息接收循环时，要归位的属性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._threadSleepTimeSpan">
+            <summary>
+            消息休眠时间
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.SetMessageThreadSleepTimeSpan(System.Int32)">
+            <summary>
+            设置消息休眠时间
+            </summary>
+            <param name="threadSleepTimeSpan"></param>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.ReceiveLoop">
+            <summary>
+            接收循环
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.ReceiveSpecialBytes(System.Int32)">
+            <summary>
+            从socket中接收指定长度的数据
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="F:SocketTransferKit.Client.SocketClient._heartSkipTimeSpan">
+            <summary>
+            心跳休眠时间
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.SetHeartSkipTimeSpan(System.Int32)">
+            <summary>
+            设置心跳休眠时间
+            </summary>
+            <param name="heartSkipTimeSpan"></param>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.KeepConnection">
+            <summary>
+            检查连接状态
+            主要两个功能
+            1、下线事件通知
+            2、心跳功能
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.TiggerHeartSkip">
+            <summary>
+            触发心跳
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.DebugLog(System.String)">
+            <summary>
+            日志的格式输出
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:SocketTransferKit.Client.SocketClient.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Client.SocketClient.ClientConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Client.SocketClient.DelayTestEnabled">
+            <summary>
+            是否启用延迟计算
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Client.SocketClient.IsKeepConnection">
+            <summary>
+            是否启用心跳机制保证连接
+            </summary>
+        </member>
+        <member name="P:SocketTransferKit.Client.SocketClient.Delay">
+            <summary>
+            与服务端的通信延迟（ms）
+            </summary>
+        </member>
+        <member name="T:SocketTransferKit.Client.TransferClientStarter">
+            <summary>
+            数据传输客户端启动器
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Client.TransferClientStarter.Start">
+            <summary>
+            （通过配置文件）生成所有Socket客户端，如果全部成功：返回Socket客户端列表，如果任一失败：返回null
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Client.TransferClientStarter.Start(System.Collections.Generic.IEnumerable{SocketTransferKit.Client.ClientConfig})">
+            <summary>
+            （通过自定配置）生成所有Socket客户端，如果全部成功：返回Socket客户端列表，如果任一失败：返回null
+            </summary>
+            <param name="configs"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

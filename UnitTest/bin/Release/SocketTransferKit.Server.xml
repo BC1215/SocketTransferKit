@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocketTransferKit.Server</name>
+    </assembly>
+    <members>
+        <member name="T:SocketTransferKit.Server.CommandOut">
+            <summary>
+            命令输出
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Server.CommandOut.ExecuteCommand(SocketTransferKit.Server.SocketSession,SuperSocket.SocketBase.Protocol.BinaryRequestInfo)">
+            <summary>
+            命令输出命令执行
+            </summary>
+            <param name="session"></param>
+            <param name="requestInfo"></param>
+        </member>
+        <member name="T:SocketTransferKit.Server.MyReceiveFilter">
+            <summary>
+            FixedHeaderReceiveFilter协议
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Server.MyReceiveFilter.GetBodyLengthFromHeader(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            返回数据体长度
+            </summary>
+            <param name="header">头数据</param>
+            <param name="offset">消息体长度数据位置偏移</param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Server.MyReceiveFilter.ResolveRequestInfo(System.ArraySegment{System.Byte},System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            解析数据
+            </summary>
+            <param name="header"></param>
+            <param name="bodyBuffer"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Server.SocketServer.#ctor">
+            <summary>
+            不应直接实例化此类型，请使用TransferStarter
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Server.SocketServer.Broadcast(SocketTransferKit.Data.ICommand)">
+            <summary>
+            向当前所有已连接到此服务端的客户端发送命令
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:SocketTransferKit.Server.SocketServer.RaiseOnCommandArrivedEvent(SocketTransferKit.Server.SocketSession,SocketTransferKit.Data.ICommand)">
+            <summary>
+            触发命令到达事件
+            </summary>
+            <param name="clientSession"></param>
+            <param name="command"></param>
+        </member>
+        <member name="M:SocketTransferKit.Server.SocketServer.OnNewSessionConnected(SocketTransferKit.Server.SocketSession)">
+            <summary>
+            新的客户端连接
+            </summary>
+            <param name="session"></param>
+        </member>
+        <member name="E:SocketTransferKit.Server.SocketServer.OnCommandArrived">
+            <summary>
+            命令到达事件
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Server.SocketSession.SendCommand(SocketTransferKit.Data.ICommand)">
+            <summary>
+            向客户端发送命令
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:SocketTransferKit.Server.SocketSession.HandleUnknownRequest(SuperSocket.SocketBase.Protocol.BinaryRequestInfo)">
+            <summary>
+            响应不支持的数据
+            </summary>
+            <param name="requestInfo"></param>
+        </member>
+        <member name="P:SocketTransferKit.Server.SocketSession.SessionClientName">
+            <summary>
+            会话的客户端名称
+            </summary>
+        </member>
+        <member name="T:SocketTransferKit.Server.TransferServerStarter">
+            <summary>
+            数据传输服务器启动器
+            </summary>
+        </member>
+        <member name="M:SocketTransferKit.Server.TransferServerStarter.Start(System.Int32,System.String)">
+            <summary>
+            （通过配置文件）启动所有Socket服务器，如果全部成功：返回Socket服务器列表，如果任一失败：返回null
+            </summary>
+            <param name="mode">启动模式：0标准模式（支持所有配置，启动速度慢），1兼容模式（启动速度快，只支持TextEncoding、Ip、Port、Mode、MaxRequestLength、Name配置,2快速配置(只支持端口配置其他默认)）</param>
+            <param name="configFileAbsPath">指定EXE配置文件路径，如果未指定则读取默认配置文件(仅在兼容模式生效)</param>
+            <returns>配置文件中已配置的Socket服务器的实例</returns>
+        </member>
+        <member name="M:SocketTransferKit.Server.TransferServerStarter.SlefPortStart(System.Int32)">
+            <summary>
+            历史数据库和中间程序使用
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketTransferKit.Server.TransferServerStarter.Stop">
+            <summary>
+            停止所有Socket服务器
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
